@@ -12,7 +12,7 @@ namespace REGEXUserRegistration
             while (flag)
             {
                 Console.WriteLine("Welcome to the User Registration validation program");
-                Console.WriteLine("Enter the validation to Execute : \n 1. Candidate First Name \n 2. Candidate Last Name \n 3. Candidate Email \n 4. Mobile Number \n 5. Password Rule=1 \n 6. Exit");
+                Console.WriteLine("Enter the validation to Execute : \n 1. Candidate First Name \n 2. Candidate Last Name \n 3. Candidate Email \n 4. Mobile Number \n 5. Password Rule=1 \n 6. Password Rule=2 \n 7. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -32,6 +32,9 @@ namespace REGEXUserRegistration
                         Console.WriteLine(validation.ValidatePassword1("gunanani"));
                         break;
                     case 6:
+                        Console.WriteLine(validation.ValidatePassword2("Gunanani"));
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
