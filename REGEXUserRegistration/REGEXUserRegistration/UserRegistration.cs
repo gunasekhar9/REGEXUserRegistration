@@ -13,6 +13,7 @@ namespace REGEXUserRegistration
         public static string REGEX_MOBILE = "^[1,9]{2} [6-9]{1}[0-9]{9}";
         public static string REGEX_PASSWORD1 = "^[a-z]{8}";
         public static string REGEX_PASSWORD2 = "^[A-Z]{1}[a-z]{7}$";
+        public static string REGEX_PASSWORD3 = "^[A-Z]{1}[a-z]{7}[0-9]{1}$";
         public bool ValidateFirstName(string firstName)
         {
             return Regex.IsMatch(firstName, REGEX_FIRST_NAME);
@@ -37,5 +38,10 @@ namespace REGEXUserRegistration
         {
             return Regex.IsMatch(Password2, REGEX_PASSWORD2);
         }
+        public bool ValidatePassword3(string password3)
+        {
+            return Regex.IsMatch(password3, REGEX_PASSWORD3);
+        }
+
     }
 }
